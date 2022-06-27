@@ -20,114 +20,76 @@ const config = {
   projectName: 'godwokensite-sample', // Usually your repo name.
   deploymentBranch: "gh-pages",
 
-  // Even if you don't use internalization, you can use this field to set useful
-  // metadata like html lang. For example, if your site is Chinese, you may want
-  // to replace "en" with "zh-Hans".
-  i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
-  },
+  plugins: [
+    'docusaurus-plugin-matomo',
+  ],
+  themeConfig: {
+    colorMode: {
+      defaultMode: 'light',
+      disableSwitch: true,
+      respectPrefersColorScheme: false,
+    },
+    algolia: {
+      appId: 'W0P1A076NN',
+      apiKey: "4a00c5457da3a6e940925cf7cb834418",
+      indexName: "godwoken",
+    },	
+    navbar: {
+	hideOnScroll: true,
+      title: 'Godwoken Documentation',
+      logo: {
+        alt: 'Nervos',
+        src: 'img/favicon.png',
+		href: 'https://www.nervos.org/',
+      },
+      items: [
+        {
+          type: 'docsVersionDropdown',
+          position: 'right'
+        },
 
+        {
+          href: 'https://github.com/nervosnetwork/godwoken',
+          label: 'GitHub',
+          position: 'right',
+        },
+		{
+          label: 'Discord',
+          href: 'https://discord.gg/TfC9rExfHh',
+		  position: 'right',
+        },
+      ],
+    },
+    footer: {
+      style: 'dark',
+      copyright: `Copyright © ${new Date().getFullYear()} Nervos Foundation. All Rights Reserved.`,
+    },
+    matomo: {
+      matomoUrl: 'https://cryptapeblog.matomo.cloud/',
+      siteId: '2',
+      phpLoader: 'matomo.php',
+      jsLoader: 'matomo.js',
+    },
+  },
   presets: [
     [
-      'classic',
-      /** @type {import('@docusaurus/preset-classic').Options} */
-      ({
-        docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+      '@docusaurus/preset-classic',
+      {
+        googleAnalytics: {
+          trackingID: 'UA-215912231-1',
+          anonymizeIP: true,
         },
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+        docs: {
+			path: 'docs',
+			sidebarPath: require.resolve('./sidebars.js'),
+			routeBasePath: '/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
-      }),
+      },
     ],
   ],
-
-  themeConfig:
-    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-    ({
-      navbar: {
-        title: 'My Site',
-        logo: {
-          alt: 'My Site Logo',
-          src: 'img/logo.svg',
-        },
-        items: [
-          {
-            type: 'doc',
-            docId: 'intro',
-            position: 'left',
-            label: 'Tutorial',
-          },
-          {to: '/blog', label: 'Blog', position: 'left'},
-          {
-            href: 'https://github.com/facebook/docusaurus',
-            label: 'GitHub',
-            position: 'right',
-          },
-        ],
-      },
-      footer: {
-        style: 'dark',
-        links: [
-          {
-            title: 'Docs',
-            items: [
-              {
-                label: 'Tutorial',
-                to: '/docs/intro',
-              },
-            ],
-          },
-          {
-            title: 'Community',
-            items: [
-              {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
-              },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
-              },
-            ],
-          },
-        ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
-      },
-      prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
-      },
-    }),
 };
 
 module.exports = config;
