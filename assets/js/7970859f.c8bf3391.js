@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkgodwokensite_sample=self.webpackChunkgodwokensite_sample||[]).push([[3305],{6195:e=>{e.exports=JSON.parse('{"label":"hola","permalink":"/godwokensite-sample/blog/tags/hola","allTagsPath":"/godwokensite-sample/blog/tags","count":1}')}}]);
