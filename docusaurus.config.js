@@ -1,11 +1,5 @@
-// @ts-check
-// Note: type annotations allow type checking and IDEs autocompletion
-
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
-
-/** @type {import('@docusaurus/types').Config} */
-const config = {
+/** @type {import('@docusaurus/types').DocusaurusConfig} */
+module.exports = {
   title: 'Godwoken Documentation',
   tagline: 'Godwoken Documentation',
   url: 'https://github.com',
@@ -14,12 +8,10 @@ const config = {
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
 
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
   organizationName: 'ashleewang888', // Usually your GitHub org/user name.
   projectName: 'godwokensite-sample', // Usually your repo name.
   deploymentBranch: "gh-pages",
-
+  
   plugins: [
     'docusaurus-plugin-matomo',
   ],
@@ -42,6 +34,7 @@ const config = {
         src: 'img/favicon.png',
 		href: 'https://www.nervos.org/',
       },
+      
       items: [
         {
           type: 'docsVersionDropdown',
@@ -91,5 +84,3 @@ const config = {
     ],
   ],
 };
-
-module.exports = config;
