@@ -6,7 +6,7 @@
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://github.com/godwokensite-sample/blog"/>
     <subtitle>Godwoken Documentation Blog</subtitle>
-    <icon>https://github.com/godwokensite-sample/img/favicon.png</icon>
+    <icon>https://github.com/godwokensite-sample/img/Godwoken_black.png</icon>
     <entry>
         <title type="html"><![CDATA[Welcome]]></title>
         <id>welcome</id>

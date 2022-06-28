@@ -4,7 +4,7 @@
   <ShortName>Godwoken Documentation</ShortName>
   <Description>Search Godwoken Documentation</Description>
   <InputEncoding>UTF-8</InputEncoding>
-  <Image width="16" height="16" type="image/x-icon">https://github.com/godwokensite-sample/img/favicon.png</Image>
+  <Image width="16" height="16" type="image/x-icon">https://github.com/godwokensite-sample/img/Godwoken_black.png</Image>
   <Url type="text/html" method="get" template="https://github.com/godwokensite-sample/search?q={searchTerms}"/>
   <Url type="application/opensearchdescription+xml" rel="self" template="https://github.com/godwokensite-sample/opensearch.xml" />
   <moz:SearchForm>https://github.com/godwokensite-sample/</moz:SearchForm>
